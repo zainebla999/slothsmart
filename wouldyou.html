@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Question</title>
+    <style>
+        body {
+            background-color: #f37ea7;
+        }
+
+        #option2 {
+            position: absolute;
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Would you go out with me????</h1>
+
+
+    <img src="https://media.giphy.com/media/l2QDTsTL2NhwOEAV2/giphy.gif" alt="Cute Cat GIF">
+    <br><br>
+    <button id="option1" onclick="alert('Just as I thought!')">Yes</button>
+    <button id="option2">No</button>
+
+    <script>
+        const button = document.getElementById('option2');
+        button.addEventListener('mouseover', function () {
+            button.style.left = `${Math.ceil(Math.random() * 90)}%`;
+            button.style.top = `${Math.ceil(Math.random() * 90)}%`;
+        });
+        
+    </script>
+</body>
+</html>
